@@ -2,133 +2,149 @@
   margin: 0;
   padding: 0;
   color: white;
+  /*background: #111111;*/
 }
 
-.nombre {
-  color: white;
-  padding: 1%;
-  font-size: 1.5em;
-}
-
-.cont_principal {
-  margin: 10vh auto 0;
-}
-
-.pri_pag {
-  width: 100%;
-  height: 100vh;
-  background-image: linear-gradient(
-      to left,
-      rgba(21, 59, 47, 0.5),
-      rgba(22, 13, 36, 0.5)
-    ),
-    url("../assets/fondo.jpg");
+body {
+  background-image: linear-gradient(to left, rgba(5, 11, 22, 0.9), rgba(17, 5, 20, 0.9)), url("../assets/fondo.jpg");
   background-size: 100%;
   background-repeat: initial;
   background-position: center;
+  background-size: 100%;
+  overflow-y: hidden;
 }
 
-.cont_avatar {
+.principal {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.nav {
+  grid-area: 1 / 1 / 2 / 2;
+  align-items: center;
+  border-right: 1px solid white;
+  background: rgba(17, 17, 17, 0.65);
+  height: 100vh;
+}
+
+.contenido {
+  grid-area: 1 / 2 / 2 / 3;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+img {
+  display: flex;
+  margin: 0 auto;
+}
+
+.user {
+  width: 75px;
+}
+
+.linkedin {
+  width: 50px;
+}
+
+.github {
+  width: 50px;
+}
+
+.mail {
+  width: 50px;
+}
+
+.col-sm-3,
+.col-12 {
+  padding: 0;
+}
+
+.presentacion {
+  width: 70%;
+  margin: 35vh auto 0;
   text-align: center;
-}
-
-.avatar {
-  width: 10%;
 }
 
 .saludo {
-  /* border: 3px solid rgb(182, 255, 194); */
-  text-align: center;
-  margin: auto;
-  width: 100%;
-  padding: 1%;
+  font-size: 3.5em;
 }
 
-.cont_presentacion {
-  margin: 1vh 0 0;
-  text-align: center;
+.descripcion {
+  font-size: 1.5em;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
-#mail {
-  width: 4.5%;
-  padding: 1%;
-}
-
-#github {
-  width: 6%;
-  padding: 1%;
-}
-
-#linkedin {
-  width: 4.5%;
-  padding: 1%;
-}
-
-@media (max-width: 900px) {
-  .cont_principal {
-    margin: 10vh auto 0;
-  }
-
-  .pri_pag {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(
-        to left,
-        rgba(8, 19, 15, 0.8),
-        rgba(22, 13, 36, 0.8)
-      ),
+@media (max-width: 576px) {
+  body {
+    background-image: linear-gradient(to left, rgba(5, 11, 22, 0.9), rgba(17, 5, 20, 0.9)),
       url("../assets/fondo\ 2.jpg");
-    background-size: 100%;
   }
 
-  .avatar {
-    width: 20%;
+  .principal {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 12vh 88vh;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+
+  .nav {
+    grid-area: 1 / 1 / 2 / 2;
+    border-bottom: 1px solid white;
+    border-right: none;
+    height: auto;
+  }
+
+  .contenido {
+    grid-area: 2 / 1 / 3 / 2;
+    overflow-y: scroll;
+    height: auto;
+  }
+
+  .user {
+    width: 50px;
+  }
+
+  .linkedin {
+    width: 35px;
+  }
+
+  .github {
+    width: 35px;
+  }
+
+  .mail {
+    width: 35px;
+  }
+
+  .presentacion {
+    width: 95%;
+    margin: 35vh auto 0;
+    text-align: center;
   }
 
   .saludo {
-    width: 90%;
+    font-size: 2.5em;
   }
 
-  #mail {
-    width: 6.5%;
-    padding: 1%;
-  }
-
-  #github {
-    width: 8.5%;
-    padding: 1%;
-  }
-
-  #linkedin {
-    width: 6.5%;
-    padding: 1%;
+  .descripcion {
+    font-size: 1.5em;
   }
 }
 
-@media (max-width: 500px) {
-  .avatar {
-    width: 30%;
+@media screen and (min-width: 577px) and (max-width: 1200px) {
+  body {
+    background-image: linear-gradient(to left, rgba(5, 11, 22, 0.9), rgba(17, 5, 20, 0.9)),
+      url("../assets/fondo\ 2.jpg");
   }
 
-  #mail {
-    width: 9%;
-    padding: 1%;
-  }
-
-  #github {
-    width: 14%;
-    padding: 1%;
-  }
-
-  #linkedin {
-    width: 9%;
-    padding: 1%;
+  .principal {
+    display: grid;
+    grid-template-columns: 15% 90%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
   }
 }
